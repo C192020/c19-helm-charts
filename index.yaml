@@ -3,12 +3,12 @@ entries:
   letsencrypt-issuer:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-05-21T22:38:01.864774022+10:00"
+    created: "2020-05-22T07:26:20.483885574+10:00"
     description: A Helm chart for Kubernetes
-    digest: 8de2ffd19ca631b9bc17f3ee24dc193b4e7896c1f19f376578f5ecd7f8b3b7e5
+    digest: ef7afd109961e784684ef602d9bd22826efd46cb82cb6d7277e2a016645807b1
     name: letsencrypt-issuer
     type: application
     urls:
     - letsencrypt-issuer/letsencrypt-issuer-0.1.0.tgz
     version: 0.1.0
-generated: "2020-05-21T22:38:01.863637142+10:00"
+generated: "2020-05-22T07:26:20.483386882+10:00"
