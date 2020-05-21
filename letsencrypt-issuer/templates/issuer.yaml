@@ -1,0 +1,16 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  acme:
+    server: {{ .Values.server }}
+    email: {{ required "A valid .Values.email entry required!" .Values.email }}
+    privateKeySecretRef:
+      name: {{ .Release.Name }}
+    solvers:
+      - selector: {}
+        http01:
+          ingress:
+            class: nginx
