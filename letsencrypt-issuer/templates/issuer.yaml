@@ -8,7 +8,7 @@ spec:
     server: {{ .Values.server | quote }}
     email: {{ required "A valid .Values.email entry required!" .Values.email | quote }}
     privateKeySecretRef:
-      name: {{ .Release.Name }}
+      name: {{ .Release.Name | quote }}
     solvers:
       - selector: {}
         http01:
