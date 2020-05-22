@@ -5,8 +5,8 @@ metadata:
   namespace: {{ .Release.Namespace }}
 spec:
   acme:
-    server: {{ .Values.server }}
-    email: {{ required "A valid .Values.email entry required!" .Values.email }}
+    server: {{ .Values.server | quote }}
+    email: {{ required "A valid .Values.email entry required!" .Values.email | quote }}
     privateKeySecretRef:
       name: {{ .Release.Name }}
     solvers:
