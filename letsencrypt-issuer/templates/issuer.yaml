@@ -1,5 +1,5 @@
 apiVersion: cert-manager.io/v1alpha2
-kind: ClusterIssuer
+kind: Issuer
 metadata:
   name: {{ .Release.Name }}
   namespace: {{ .Release.Namespace }}
@@ -8,7 +8,7 @@ spec:
     server: {{ .Values.server | quote }}
     email: {{ required "A valid .Values.email entry required!" .Values.email | quote }}
     privateKeySecretRef:
-      name: {{ .Release.Name | quote }}
+      name: {{ .Release.Name }}
     solvers:
       - selector: {}
         http01:
